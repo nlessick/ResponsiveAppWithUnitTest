@@ -1,0 +1,32 @@
+﻿@model ResponsiveAppModel
+@{
+    ViewBag.Title = "Responsive Web App";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>First Responsive Web App</title>
+    
+</head>
+<body>
+    <h1>Responsive Web App</h1>
+    <form asp-action="Index" method="post">
+    <div>
+        <label asp-for="UserName">User Name:</label>
+        <input asp-for="UserName" />
+    </div>
+    <div>
+        <label asp-for="DateOfBirth">BirthDate:</label>
+        <input asp-for="DateOfBirth" />
+    </div>
+    <div>
+        <label>User Age:</label>
+        <input value="@ViewBag.BY" readonly />
+    </div>
+    <button type="submit">Submit</button>
+    <a asp-action="Index">Clear</a>
+    </form>
+    }
+</body>
+</html>
